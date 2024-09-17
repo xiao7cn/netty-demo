@@ -5,11 +5,9 @@ import lombok.extern.slf4j.Slf4j;
 import java.io.IOException;
 import java.net.InetSocketAddress;
 import java.nio.ByteBuffer;
-import java.nio.channels.SelectionKey;
-import java.nio.channels.Selector;
-import java.nio.channels.ServerSocketChannel;
-import java.nio.channels.SocketChannel;
+import java.nio.channels.*;
 import java.util.Iterator;
+import java.util.concurrent.ConcurrentLinkedQueue;
 
 import static org.example.utils.ByteBufferUtil.debugAll;
 
@@ -35,6 +33,7 @@ public class MultiThreadServer {
                     sc.configureBlocking(false);
                     log.debug("connected... {}", sc.getRemoteAddress());
                     log.debug("before register... {}", sc.getRemoteAddress());
+                    worker.register(sc);
                     sc.register(worker.selector, SelectionKey.OP_READ, null);
                     log.debug("after register... {}", sc.getRemoteAddress());
                 }
@@ -47,18 +46,27 @@ public class MultiThreadServer {
         private Selector selector;
         private String name;
         private boolean start = false;
+        public ConcurrentLinkedQueue<Runnable> queue = new ConcurrentLinkedQueue<>();
 
         public Worker(String name) {
             this.name = name;
         }
 
-        public void register() throws IOException {
+        public void register(SocketChannel sc) throws IOException {
             if (!start) {
                 thread = new Thread(this, name);
-                thread.start();
                 selector = Selector.open();
+                thread.start();
                 start = true;
             }
+            queue.add(() -> {
+                try {
+                    sc.register(selector, SelectionKey.OP_READ, null);
+                } catch (ClosedChannelException e) {
+                    e.printStackTrace();
+                }
+            });
+            selector.wakeup();
         }
 
         @Override
@@ -66,6 +74,10 @@ public class MultiThreadServer {
             while (true) {
                 try {
                     selector.select();
+                    Runnable task = queue.poll();
+                    if (task != null) {
+                        task.run();
+                    }
                     Iterator<SelectionKey> iter = selector.selectedKeys().iterator();
                     while (iter.hasNext()) {
                         SelectionKey key = iter.next();
