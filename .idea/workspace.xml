@@ -5,11 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="8c6c2751-d561-47e3-b6aa-cf7519de7917" name="Changes" comment="init">
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/CloseFutureClient.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/TestNettyFuture.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/EventLoopClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/EventLoopClient.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/logback.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/logback.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/TestPipeline.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/TestPipeline.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -61,7 +58,20 @@
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
-  <component name="RunManager" selected="Application.TestNettyFuture">
+  <component name="RunManager" selected="Application.CloseFutureClient">
+    <configuration name="CloseFutureClient (1)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="org.example.CloseFutureClient" />
+      <module name="netty-demo" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.example.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="CloseFutureClient" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="org.example.CloseFutureClient" />
       <module name="netty-demo" />
@@ -114,45 +124,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="EventLoopClient" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="org.example.EventLoopClient" />
-      <module name="netty-demo" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="org.example.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="EventLoopClient" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="org.example.EventLoopClient" />
-      <module name="netty-demo" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="org.example.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="EventLoopServer" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="org.example.EventLoopServer" />
-      <module name="netty-demo" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="org.example.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="HelloClient (2)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="org.example.HelloClient" />
       <module name="netty-demo" />
@@ -166,8 +137,34 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="TestNettyFuture" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="org.example.TestNettyFuture" />
+    <configuration name="TestPipeline (2)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="org.example.TestPipeline" />
+      <module name="netty-demo" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.example.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TestPipeline (3)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="org.example.TestPipeline" />
+      <module name="netty-demo" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.example.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TestPipeline" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="org.example.TestPipeline" />
       <module name="netty-demo" />
       <extension name="coverage">
         <pattern>
@@ -187,18 +184,18 @@
     </configuration>
     <list>
       <item itemvalue="Application.CloseFutureClient" />
-      <item itemvalue="Application.EventLoopClient" />
-      <item itemvalue="Application.EventLoopClient (4)" />
-      <item itemvalue="Application.EventLoopServer" />
-      <item itemvalue="Application.TestNettyFuture" />
+      <item itemvalue="Application.CloseFutureClient (1)" />
+      <item itemvalue="Application.TestPipeline" />
+      <item itemvalue="Application.TestPipeline (2)" />
+      <item itemvalue="Application.TestPipeline (3)" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.TestNettyFuture" />
         <item itemvalue="Application.CloseFutureClient" />
-        <item itemvalue="Application.EventLoopServer" />
-        <item itemvalue="Application.EventLoopClient (4)" />
-        <item itemvalue="Application.EventLoopClient" />
+        <item itemvalue="Application.TestPipeline" />
+        <item itemvalue="Application.TestPipeline (3)" />
+        <item itemvalue="Application.TestPipeline (2)" />
+        <item itemvalue="Application.CloseFutureClient (1)" />
       </list>
     </recent_temporary>
   </component>
@@ -217,7 +214,7 @@
       <workItem from="1725959243474" duration="619000" />
       <workItem from="1726066538733" duration="5890000" />
       <workItem from="1726711286287" duration="1851000" />
-      <workItem from="1726928673633" duration="21919000" />
+      <workItem from="1726928673633" duration="23858000" />
     </task>
     <task id="LOCAL-00001" summary="init">
       <created>1725771258386</created>
@@ -289,7 +286,14 @@
       <option name="project" value="LOCAL" />
       <updated>1727005922329</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="init">
+      <created>1727016794207</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1727016794207</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
