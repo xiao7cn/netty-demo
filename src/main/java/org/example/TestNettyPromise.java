@@ -15,9 +15,11 @@ public class TestNettyPromise {
         new Thread(() -> {
             System.out.println("开始计算...");
             try {
+                int i = 1 / 0;
                 Thread.sleep(1000);
-            } catch (InterruptedException e) {
+            } catch (Throwable e) {
                 e.printStackTrace();
+                promise.setFailure(e);
             }
             promise.setSuccess(80);
         }).start();

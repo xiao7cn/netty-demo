@@ -5,10 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="8c6c2751-d561-47e3-b6aa-cf7519de7917" name="Changes" comment="init">
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/TestNettyPromise.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/EventLoopClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/EventLoopClient.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/EventLoopServer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/EventLoopServer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/TestNettyPromise.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/TestNettyPromise.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -177,7 +175,7 @@
       <workItem from="1725959243474" duration="619000" />
       <workItem from="1726066538733" duration="5890000" />
       <workItem from="1726711286287" duration="1851000" />
-      <workItem from="1726928673633" duration="15690000" />
+      <workItem from="1726928673633" duration="16396000" />
     </task>
     <task id="LOCAL-00001" summary="init">
       <created>1725771258386</created>
@@ -235,7 +233,14 @@
       <option name="project" value="LOCAL" />
       <updated>1726997502702</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="init">
+      <created>1727005147757</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1727005147757</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
