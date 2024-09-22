@@ -5,8 +5,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="8c6c2751-d561-47e3-b6aa-cf7519de7917" name="Changes" comment="init">
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/callable/CallableExample.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/callable/ParallelCallableExample.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/TestEventLoop.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/TestEventLoop.java" afterDir="false" />
     </list>
@@ -60,7 +58,7 @@
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
-  <component name="RunManager" selected="Application.ParallelCallableExample">
+  <component name="RunManager" selected="Application.TestEventLoop">
     <configuration name="CallableExample" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="org.example.callable.CallableExample" />
       <module name="netty-demo" />
@@ -154,9 +152,9 @@
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.TestEventLoop" />
         <item itemvalue="Application.ParallelCallableExample" />
         <item itemvalue="Application.CallableExample" />
-        <item itemvalue="Application.TestEventLoop" />
         <item itemvalue="Application.HelloClient (3)" />
         <item itemvalue="Application.HelloServer" />
       </list>
@@ -177,7 +175,7 @@
       <workItem from="1725959243474" duration="619000" />
       <workItem from="1726066538733" duration="5890000" />
       <workItem from="1726711286287" duration="1851000" />
-      <workItem from="1726928673633" duration="7200000" />
+      <workItem from="1726928673633" duration="11620000" />
     </task>
     <task id="LOCAL-00001" summary="init">
       <created>1725771258386</created>
@@ -214,7 +212,14 @@
       <option name="project" value="LOCAL" />
       <updated>1726933744149</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="init">
+      <created>1726982700486</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1726982700486</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
