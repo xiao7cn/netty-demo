@@ -1,10 +1,7 @@
 package org.example;
 
 import io.netty.bootstrap.Bootstrap;
-import io.netty.channel.Channel;
-import io.netty.channel.ChannelInitializer;
-import io.netty.channel.DefaultEventLoop;
-import io.netty.channel.EventLoopGroup;
+import io.netty.channel.*;
 import io.netty.channel.nio.NioEventLoopGroup;
 import io.netty.channel.socket.nio.NioSocketChannel;
 import io.netty.handler.codec.string.StringEncoder;
@@ -13,7 +10,7 @@ import java.net.InetSocketAddress;
 
 public class EventLoopClient {
     public static void main(String[] args) throws InterruptedException {
-        Channel channel = new Bootstrap()
+        ChannelFuture channelFuture = new Bootstrap()
                 .group(new NioEventLoopGroup())
                 .channel(NioSocketChannel.class)
                 .handler(new ChannelInitializer<NioSocketChannel>() {
@@ -22,11 +19,18 @@ public class EventLoopClient {
                         ch.pipeline().addLast(new StringEncoder());
                     }
                 })
-                .connect(new InetSocketAddress("127.0.0.1", 8080))
-                .sync()
-                .channel();
+                .connect(new InetSocketAddress("127.0.0.1", 8080));
 
-        System.out.println(channel);
-        System.out.println("");
+//        channelFuture.sync();
+//        Channel channel = channelFuture.channel();
+//        channel.writeAndFlush("hello world");
+
+        channelFuture.addListener(new ChannelFutureListener() {
+            @Override
+            public void operationComplete(ChannelFuture future) throws Exception {
+                Channel channel = future.channel();
+                channel.writeAndFlush("hello world");
+            }
+        });
     }
 }
