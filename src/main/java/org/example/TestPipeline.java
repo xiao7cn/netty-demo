@@ -39,18 +39,19 @@ public class TestPipeline {
                                 super.channelRead(ctx, student);
                             }
                         });
-                        pipeline.addLast("h3", new ChannelInboundHandlerAdapter() {
-                            @Override
-                            public void channelRead(ChannelHandlerContext ctx, Object msg) throws Exception {
-                                log.debug("3, 结果{}, class:{}", msg, msg.getClass());
-                                ch.writeAndFlush(ctx.alloc().buffer().writeBytes("server...".getBytes()));
-                            }
-                        });
                         pipeline.addLast("h4", new ChannelOutboundHandlerAdapter() {
                             @Override
                             public void write(ChannelHandlerContext ctx, Object msg, ChannelPromise promise) throws Exception {
                                 log.debug("4");
                                 super.write(ctx, msg, promise);
+                            }
+                        });
+                        pipeline.addLast("h3", new ChannelInboundHandlerAdapter() {
+                            @Override
+                            public void channelRead(ChannelHandlerContext ctx, Object msg) throws Exception {
+                                log.debug("3, 结果{}, class:{}", msg, msg.getClass());
+                                ctx.writeAndFlush(ctx.alloc().buffer().writeBytes("hello...".getBytes()));
+//                                ch.writeAndFlush(ctx.alloc().buffer().writeBytes("server...".getBytes()));
                             }
                         });
                         pipeline.addLast("h5", new ChannelOutboundHandlerAdapter() {
